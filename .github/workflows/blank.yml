@@ -1,0 +1,10 @@
+name: Run Tests
+on: [push]
+jobs:
+  verify-html:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+    - name: check if text exists
+      run: grep "My Pipeline is Live!" index.html
+    
